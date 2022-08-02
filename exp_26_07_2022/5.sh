@@ -27,3 +27,5 @@ echo " $first_number % $second_number = `expr $first_number \% $second_number`"
 echo "wrong operator "
 ;;
 esac
+
+
