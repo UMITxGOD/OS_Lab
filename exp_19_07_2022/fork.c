@@ -3,8 +3,6 @@
 #include<unistd.h>
 int main(){
     fork();
-    fork();
-    fork();
-    printf("Pid Become %d",getpid());
+    printf("Pid Become %d\n",getpid());
     return 0;
 }

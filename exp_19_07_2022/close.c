@@ -1,22 +1,19 @@
-#include<stdio.h>
-#include<stdlib.h>
-
+#include<unistd.h>
 #include<fcntl.h>
-
-void main(){
-    int open_id =open("generatePID",O_RDONLY);
-    if (open_id < 0) 
-    { 
-        perror("c1"); 
-        exit(1); 
-    } 
-    printf("opened the fd = % d\n", open_id); 
-      
-    // Using close system Call 
-    if (close(open_id) < 0) 
-    { 
-        perror("c1"); 
-        exit(1); 
-    } 
-    printf("closed the fd.\n");
+#include<sys/stat.h>
+#include<sys/types.h>
+#include<stdio.h>
+int main()
+{
+	int n,fd;
+	char buff[50];
+	printf("Enter text to write in the file:\n");
+	n= read(0, buff, 50);
+	fd=open("temprery_file.txt",O_CREAT | O_RDWR, 0777); 
+	write(fd, buff, n);
+	write(1, buff, n);
+	if(close(fd) == 0 ){
+      printf("File is close Successfully ");
+    }
+	return 0;	
 }

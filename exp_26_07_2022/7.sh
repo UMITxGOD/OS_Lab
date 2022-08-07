@@ -12,3 +12,5 @@ do
   ((counter--))
 done
 echo "Factorial of $number is $factorial"
+
+

@@ -9,6 +9,9 @@ read -p "Enter common difference : " common_difference
 
 while [[ $starting_point -lt $ending_point+1 ]]
 do
-echo $starting_point
+echo -n "$starting_point , "
 ((starting_point += common_difference))
 done
+
+
+

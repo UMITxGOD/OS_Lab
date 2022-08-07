@@ -2,6 +2,6 @@
 #include<sys/types.h>
 #include<unistd.h>
 int main(){
-    printf("My Name is Umit \n PID  of test2.c %d",getpid());
+    printf("Pid Become %d\n",getpid());
     return 0;
 }
